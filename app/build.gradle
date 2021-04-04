@@ -18,7 +18,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    dataBinding {
+
+    viewBinding {
         enabled = true
     }
 
@@ -67,4 +68,7 @@ dependencies {
 
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    //Card
+    implementation "androidx.cardview:cardview:1.0.0"
 }
