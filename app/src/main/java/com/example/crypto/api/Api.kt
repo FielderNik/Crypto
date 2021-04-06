@@ -8,11 +8,15 @@ class Api {
 
     val BASE_URL = "https://api.minerstat.com"
 
+
     val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
     val coinService: ServiceCrypto = retrofit.create(ServiceCrypto::class.java)
+
+
+
 
 }

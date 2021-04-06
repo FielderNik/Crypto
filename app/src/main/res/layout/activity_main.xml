@@ -8,18 +8,271 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="0.00 $"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvPriceRub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="0.00 P"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/etherium_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+
+        android:fontFamily="@font/montserrat_bold"
+        android:text="ETHEREUM"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDay"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserHashrate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="1 час"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                />
+
+            <TextView
+                android:id="@+id/tvDollarHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 $"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvRubHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 P"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cvDay"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserHashrate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="1 день"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                />
+
+            <TextView
+                android:id="@+id/tvDollarDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 $"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvRubDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 P"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvDay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="1 неделя"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvDollarWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 $"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvRubWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 P"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cvDay"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="1 месяц"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvDollarMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 $"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvRubMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 P"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
     <EditText
         android:id="@+id/etHashrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="hashrate"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowProfit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnShowProfit"
@@ -33,181 +286,30 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
+    <!--
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:cardElevation="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnShowProfit"
+        app:layout_constraintBottom_toTopOf="@+id/etHashrate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etHashrate">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/ivLogo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/etherium_image"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ethereum"
-                app:layout_constraintStart_toEndOf="@+id/ivLogo"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="32dp"
-                android:textSize="32sp"
-
-                />
 
             <TableLayout
                 android:id="@+id/tableLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
+                android:layout_marginTop="104dp"
                 android:padding="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/ivLogo"
-                app:layout_constraintStart_toStartOf="parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Coin"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvCoin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ETH" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Difficulty"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvDifficulty"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Network Hashrate"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvNetworkHashrate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Price"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Reward block"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvRewardBlock"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Blocktime"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvBlockTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="User Hashrate"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvUserHashrate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00" />
-                </TableRow>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo">
 
 
                 <TableRow
@@ -219,6 +321,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:text="Block per hour"
+                        android:fontFamily="@font/montserrat_bold"
                         android:textStyle="bold" />
 
                     <TextView
@@ -270,9 +373,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
     </androidx.cardview.widget.CardView>
+    -->
+
+    <TextView
+        android:id="@+id/tvUserHashrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="0.00 Mh/s"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPriceRub"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
