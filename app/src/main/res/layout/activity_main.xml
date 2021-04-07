@@ -75,23 +75,32 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat"
                 android:text="1 час"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@color/gray"
                 />
+
+            <TextView
+                android:id="@+id/tvCoinHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 E"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvDollarHour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 $"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvRubHour"
@@ -100,7 +109,7 @@
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 P"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -127,23 +136,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat"
                 android:text="1 день"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@color/gray"
                 />
+            <TextView
+                android:id="@+id/tvCoinDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 E"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvDollarDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 $"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvRubDay"
@@ -152,7 +169,7 @@
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 P"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -179,22 +196,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat"
                 android:text="1 неделя"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvCoinWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 E"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvDollarWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 $"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvRubWeek"
@@ -203,7 +229,7 @@
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 P"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -230,22 +256,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat"
                 android:text="1 месяц"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvCoinMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="0.00 E"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvDollarMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 $"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvRubMonth"
@@ -254,7 +289,7 @@
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="0.00 P"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 

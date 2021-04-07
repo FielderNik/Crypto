@@ -1,0 +1,11 @@
+
+
+        //userhashrate
+        //network_hashrate
+        //difficulty
+        //reward_block
+        //"
+        //blocktime=diificulty/nethash"
+        //userratio=userhashrate/nethashrate
+        //blockperhour=3600/blocktime
+        //coinhour=reward*userratio*blockperhour
