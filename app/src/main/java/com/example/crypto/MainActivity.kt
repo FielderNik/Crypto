@@ -57,6 +57,13 @@ class MainActivity : AppCompatActivity() {
                 networkHash = it.network_hashrate
                 rewardBlock = it.reward_block
                 Log.d("milk", "it: $it")
+
+            }
+        })
+
+        viewModelThreads.booleanLiveData.observe(this, Observer {
+            if (it == true){
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
             }
         })
 

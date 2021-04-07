@@ -1,6 +1,7 @@
 package com.example.crypto.viewmodel
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,6 +12,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.lang.Exception
 
 class ViewModelThreads(application: Application) : AndroidViewModel(application) {
 
@@ -21,8 +23,11 @@ class ViewModelThreads(application: Application) : AndroidViewModel(application)
     var coinPrice: Double
     var usdExchange: Double
     var priceRub: Double
+    var booleanLiveData: MutableLiveData<Boolean>
 
     init {
+        booleanLiveData = MutableLiveData()
+        booleanLiveData.value = false
         coinLiveData = MutableLiveData()
         coinLD = MutableLiveData()
         api = Api()
@@ -34,12 +39,21 @@ class ViewModelThreads(application: Application) : AndroidViewModel(application)
 
 
     fun getCourse(){
-
+        var coinItem: CoinItem? = null
         CoroutineScope(Dispatchers.IO).launch {
-            val coinItem: CoinItem = api.coinService.getCoinInfo("ETH").execute().body()?.get(0)!!
-            coinPrice = coinItem.price
-            usdExchange = apiExchange.exchangeService.getExchangeData().execute().body()?.rates?.RUB!!
-            priceRub = coinPrice * usdExchange
+
+            try {
+                coinItem = api.coinService.getCoinInfo("ETH").execute().body()?.get(0)
+                coinPrice = coinItem?.price!!
+                usdExchange = apiExchange.exchangeService.getExchangeData().execute().body()?.rates?.RUB!!
+                priceRub = coinPrice * usdExchange
+            } catch (e: Exception){
+                withContext(Dispatchers.Main){
+                    booleanLiveData.value = true
+                }
+
+            }
+
             withContext(Dispatchers.Main){
                 coinLD.value = priceRub
                 coinLiveData.value = coinItem
