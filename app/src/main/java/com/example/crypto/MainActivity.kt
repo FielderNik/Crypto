@@ -146,6 +146,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvRubMonth.text = myFormatter.format(coinPerMonth * priceRub)
 
 
+
         }
 
     }

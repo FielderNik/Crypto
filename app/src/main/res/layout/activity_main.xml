@@ -38,7 +38,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/etherium_image"
+        android:src="@drawable/logo_eth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,10 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-
         android:fontFamily="@font/montserrat_bold"
         android:text="ETHEREUM"
-        android:textColor="#000000"
         android:textSize="32sp"
         app:layout_constraintStart_toEndOf="@+id/ivLogo"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +78,7 @@
                 android:fontFamily="@font/montserrat"
                 android:text="1 час"
                 android:textSize="12sp"
-                android:textColor="@color/gray"
+                android:textColor="@color/colorTextSecondary"
                 />
 
             <TextView
@@ -141,7 +139,7 @@
                 android:fontFamily="@font/montserrat"
                 android:text="1 день"
                 android:textSize="12sp"
-                android:textColor="@color/gray"
+                android:textColor="@color/colorTextSecondary"
                 />
             <TextView
                 android:id="@+id/tvCoinDay"
@@ -201,7 +199,7 @@
                 android:fontFamily="@font/montserrat"
                 android:text="1 неделя"
                 android:textSize="12sp"
-                android:textColor="@color/gray"/>
+                android:textColor="@color/colorTextSecondary"/>
 
             <TextView
                 android:id="@+id/tvCoinWeek"
@@ -261,7 +259,7 @@
                 android:fontFamily="@font/montserrat"
                 android:text="1 месяц"
                 android:textSize="12sp"
-                android:textColor="@color/gray"/>
+                android:textColor="@color/colorTextSecondary"/>
 
             <TextView
                 android:id="@+id/tvCoinMonth"
@@ -299,11 +297,12 @@
 
     <EditText
         android:id="@+id/etHashrate"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="hashrate"
-        android:inputType="number"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btnShowProfit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -315,6 +314,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="show profit"
+        android:fontFamily="@font/montserrat_bold"
+        android:background="@drawable/mybutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
