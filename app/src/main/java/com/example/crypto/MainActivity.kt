@@ -1,5 +1,6 @@
 package com.example.crypto
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -13,6 +14,13 @@ import java.text.DecimalFormatSymbols
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    companion object{
+        val APP_PREFERENCES = "cryptoPreferences"
+        val APP_PREFERENCES_RUBHOUR = "rubPerHour"
+        val APP_PREFERENCES_USDHOUR = "usdPerHour"
+        val APP_PREFERENCES_ETHHOUR = "ethPerHour"
+    }
 
     var difficulty: Double = 0.0
     var networkHash: Double = 0.0
@@ -41,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val settings = applicationContext.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
+        val editor = settings.edit()
 
 //        val viewModelCrypto = ViewModelProvider(this).get(ViewModelCrypto::class.java)
         val viewModelThreads = ViewModelProvider(this).get(ViewModelThreads::class.java)
@@ -116,8 +127,8 @@ class MainActivity : AppCompatActivity() {
             binding.tvCoinHour.text = String.format("%.6f E", coinPerHour)
             binding.tvDollarHour.text = String.format("%.2f $", (coinPerHour * price))
 //            binding.tvRubHour.text = String.format("% .0f P", (coinPerHour * priceRub))
-            binding.tvRubHour.text = myFormatter.format(coinPerHour * priceRub)
-
+            val rubPerHour = myFormatter.format(coinPerHour * priceRub)
+            binding.tvRubHour.text = rubPerHour
 
             blockPerDay = 3600 * 24 / blockTime
             coinPerDay = rewardBlock * userRatio * blockPerDay
@@ -144,6 +155,12 @@ class MainActivity : AppCompatActivity() {
             binding.tvDollarMonth.text = String.format("%.2f $", coinPerMonth * price)
 //            binding.tvRubMonth.text = String.format("%,.0f P", coinPerMonth * priceRub)
             binding.tvRubMonth.text = myFormatter.format(coinPerMonth * priceRub)
+
+
+            editor.putString(APP_PREFERENCES_RUBHOUR, rubPerHour)
+            editor.putString(APP_PREFERENCES_USDHOUR, String.format("%.2f $", (coinPerHour * price)))
+            editor.putString(APP_PREFERENCES_ETHHOUR, String.format("%.4f E", coinPerHour))
+            editor.apply()
 
 
 

@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.Crypto.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_toStartOf="@+id/appwidget_text"
+            android:textSize="12sp"
+            android:text="доход в час:"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tvWidgetRUBPerHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="@string/appwidget_text"
+            android:text="@string/appwidget_text"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+             />
+        <TextView
+            android:id="@+id/tvWidgetUSDPerHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="@string/appwidget_text"
+            android:text="@string/appwidget_text"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/tvWidgetETHPerHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="@string/appwidget_text"
+            android:text="@string/appwidget_text"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
